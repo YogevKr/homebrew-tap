@@ -3,8 +3,8 @@ class XBookmarks < Formula
 
   desc "Shell-first X bookmarks archive with local search and sync"
   homepage "https://github.com/YogevKr/x-bookmarks"
-  url "https://github.com/YogevKr/x-bookmarks/releases/download/v0.1.4/x_bookmarks-0.1.4.tar.gz"
-  sha256 "abf55acfc68370cb908e3c386c7b57ac64dd12febc08d633f7d6947514a252f7"
+  url "https://github.com/YogevKr/x-bookmarks/releases/download/v0.1.5/x_bookmarks-0.1.5.tar.gz"
+  sha256 "dc2b62cc5794530de8ab7fc05bf442a044c2e9a7f5439fd6d96527352136b6da"
   license "MIT"
 
   depends_on "python@3.14"
