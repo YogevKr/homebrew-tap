@@ -9,9 +9,22 @@ on:
 jobs:
   formula:
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula:
+          - draftsx
+          - things-cli
+          - x-bookmarks
     steps:
       - uses: actions/checkout@v4
+      - name: Register checkout as tap
+        run: |
+          tap_dir="$(brew --repository)/Library/Taps/yogevkr/homebrew-tap"
+          mkdir -p "$(dirname "$tap_dir")"
+          rm -rf "$tap_dir"
+          ln -s "$GITHUB_WORKSPACE" "$tap_dir"
       - name: Install formula
-        run: brew install --formula ./Formula/draftsx.rb
-      - name: Verify binary
-        run: draftsx --version
+        run: brew install "yogevkr/tap/${{ matrix.formula }}"
+      - name: Run formula test
+        run: brew test "yogevkr/tap/${{ matrix.formula }}"
