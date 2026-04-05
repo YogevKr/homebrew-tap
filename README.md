@@ -13,4 +13,4 @@ brew install yogevkr/tap/x-bookmarks
 ## Formulae
 
 - `draftsx`: CLI and rebuildable local index for Drafts.app
-- `x-bookmarks`: shell-first X bookmarks archive with local search and indexing
+- `x-bookmarks`: shell-first X bookmarks archive with local search and sync

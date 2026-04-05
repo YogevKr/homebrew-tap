@@ -1,10 +1,10 @@
 class XBookmarks < Formula
   include Language::Python::Virtualenv
 
-  desc "Shell-first X bookmarks archive with local search and indexing"
+  desc "Shell-first X bookmarks archive with local search and sync"
   homepage "https://github.com/YogevKr/x-bookmarks"
-  url "https://github.com/YogevKr/x-bookmarks/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "218cb000bebde07ece883ddf7c9f7b24e9a47e61a7f79c9b2eebd171fbcd0f0c"
+  url "https://github.com/YogevKr/x-bookmarks/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   license "MIT"
 
   depends_on "python@3.14"
@@ -14,6 +14,6 @@ class XBookmarks < Formula
   end
 
   test do
-    assert_match "X Bookmarks pipeline", shell_output("#{bin}/x-bookmarks --help")
+    assert_match version.to_s, shell_output("#{bin}/x-bookmarks version")
   end
 end
