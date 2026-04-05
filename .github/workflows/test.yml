@@ -1,0 +1,17 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  formula:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install formula
+        run: brew install --formula ./Formula/draftsx.rb
+      - name: Verify binary
+        run: draftsx --version
