@@ -3,8 +3,8 @@ class Draftsx < Formula
 
   desc "CLI and rebuildable local index for Drafts.app"
   homepage "https://github.com/YogevKr/draftsx"
-  url "https://github.com/YogevKr/draftsx/releases/download/v0.1.1/draftsx-0.1.1.tar.gz"
-  sha256 "9d14cb053e73293180744bbfa5c50e702e0cf628d723cee9c00b82099ad30210"
+  url "https://github.com/YogevKr/draftsx/releases/download/v0.1.2/draftsx-0.1.2.tar.gz"
+  sha256 "55321d93580fad98f7dc25a101c7ea68b11b9fd32b8594a08c307b9728ec3592"
   license "MIT"
 
   depends_on "python@3.13"
