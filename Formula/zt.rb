@@ -1,27 +1,25 @@
 class Zt < Formula
   desc "Remote Zellij session manager for humans and automation"
   homepage "https://github.com/YogevKr/zt"
-  url "https://github.com/YogevKr/zt/archive/refs/tags/v0.1.4.tar.gz"
-  version "0.2.12"
-  sha256 "9aa7642f9578aa096910081f6fab3b74a73eb4e1d3178eb3349f1517bfde6eeb"
-  license "MIT"
-
-  depends_on "python@3.14"
-
-  def install
-    python = Formula["python@3.14"].opt_bin/"python3.14"
-    inreplace "zt", 'VERSION = "0.1.4"', 'VERSION = "0.2.12"'
-
-    libexec.install "zt" => "zt.py"
-    (bin/"zt").write <<~SH
-      exec "#{python}" "#{libexec}/zt.py" "$@"
-    SH
-    File.chmod 0755, bin/"zt"
-    prefix.install "README.md", "LICENSE"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/YogevKr/zt/releases/download/v0.3.0/zt-v0.3.0-aarch64-apple-darwin.tar.gz"
+    sha256 "27c72bfd9b2574a020a25174bf5692c84d1a68be137ffedcd6900b0e4041526e"
+  else
+    url "https://github.com/YogevKr/zt/archive/refs/tags/v0.3.0.tar.gz"
+    sha256 "9c540b0928f77c266596e3192e5833bb6d2f3ec11b634e6ba9e9ec28c60fa67a"
   end
 
-  def post_install
-    File.chmod 0755, bin/"zt"
+  license "MIT"
+
+  depends_on "rust" => :build if OS.linux? || Hardware::CPU.intel?
+
+  def install
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "zt"
+    else
+      system "cargo", "install", *std_cargo_args
+    end
+    prefix.install "README.md", "LICENSE"
   end
 
   test do
