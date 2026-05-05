@@ -1,17 +1,14 @@
 class Zt < Formula
   desc "Remote Zellij session manager for humans and automation"
   homepage "https://github.com/YogevKr/zt"
-  url "https://github.com/YogevKr/zt/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "9aa7642f9578aa096910081f6fab3b74a73eb4e1d3178eb3349f1517bfde6eeb"
+  url "https://github.com/YogevKr/zt/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "66e8fe2f15e1bc27b0417bc793aec5eab60c74ac2ad98368d75ce64f7bb23ff7"
   license "MIT"
 
-  depends_on "python@3.14"
+  depends_on "rust" => :build
 
   def install
-    python = Formula["python@3.14"].opt_bin/"python3.14"
-    inreplace "zt", "#!/usr/bin/env python3", "#!#{python}"
-
-    bin.install "zt"
+    system "cargo", "install", *std_cargo_args
     prefix.install "README.md", "LICENSE"
   end
 
