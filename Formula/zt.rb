@@ -1,5 +1,5 @@
 class Zt < Formula
-  desc "Remote Zellij session manager for humans and automation"
+  desc "Remote Zellij session manager for humans and agents"
   homepage "https://github.com/YogevKr/zt"
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/YogevKr/zt/releases/download/v0.3.1/zt-v0.3.1-aarch64-apple-darwin.tar.gz"

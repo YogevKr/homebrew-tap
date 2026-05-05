@@ -17,4 +17,4 @@ brew install yogevkr/tap/zt
 - `draftsx`: CLI and rebuildable local index for Drafts.app
 - `things-cli`: CLI for agents working with the real Things 3 app
 - `x-bookmarks`: shell-first X bookmarks archive with local search and sync
-- `zt`: remote Zellij session manager for humans and automation
+- `zt`: remote Zellij session manager for humans and agents
