@@ -1,8 +1,8 @@
 class Zt < Formula
   desc "Remote Zellij session manager for humans and automation"
   homepage "https://github.com/YogevKr/zt"
-  url "https://github.com/YogevKr/zt/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "b285e59f37513fb705599bfe6b6c99ea986f48e01efef100d6b064b0567e3864"
+  url "https://github.com/YogevKr/zt/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "a4c15dc8ff88fa038b4f329e32a6b568d5a297e4a93ec64016faa331dccbfbef"
   license "MIT"
 
   depends_on "python@3.14"
