@@ -16,6 +16,7 @@ jobs:
           - draftsx
           - things-cli
           - x-bookmarks
+          - zt
     steps:
       - uses: actions/checkout@v4
       - name: Register checkout as tap
