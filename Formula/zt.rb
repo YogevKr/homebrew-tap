@@ -2,11 +2,11 @@ class Zt < Formula
   desc "Remote Zellij session manager for humans and automation"
   homepage "https://github.com/YogevKr/zt"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/YogevKr/zt/releases/download/v0.3.0/zt-v0.3.0-aarch64-apple-darwin.tar.gz"
-    sha256 "27c72bfd9b2574a020a25174bf5692c84d1a68be137ffedcd6900b0e4041526e"
+    url "https://github.com/YogevKr/zt/releases/download/v0.3.1/zt-v0.3.1-aarch64-apple-darwin.tar.gz"
+    sha256 "ec43de4a2ef85ba31a4b7fb75c13fa9ad03ef88f15570808ab56fabdd5a7a31a"
   else
-    url "https://github.com/YogevKr/zt/archive/refs/tags/v0.3.0.tar.gz"
-    sha256 "9c540b0928f77c266596e3192e5833bb6d2f3ec11b634e6ba9e9ec28c60fa67a"
+    url "https://github.com/YogevKr/zt/archive/refs/tags/v0.3.1.tar.gz"
+    sha256 "8f4575973d5855efb43f63391a707bf579c90a655b81f49bf657b07aa475400c"
   end
 
   license "MIT"
