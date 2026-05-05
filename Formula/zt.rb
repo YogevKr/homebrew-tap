@@ -1,24 +1,19 @@
 class Zt < Formula
   desc "Remote Zellij session manager for humans and automation"
   homepage "https://github.com/YogevKr/zt"
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/YogevKr/zt/releases/download/v0.2.6/zt-v0.2.6-aarch64-apple-darwin.tar.gz"
-    sha256 "66643906201cbfe6a80b0f7ce313a1ec284f5730df5efba41253a011680e391b"
-  else
-    url "https://github.com/YogevKr/zt/archive/refs/tags/v0.2.6.tar.gz"
-    sha256 "cc684f5a81950702b5010e64759a3d64e67baa6e1a93272ce3f327ab4cafce7e"
-  end
-
+  url "https://github.com/YogevKr/zt/archive/refs/tags/v0.1.4.tar.gz"
+  version "0.2.7"
+  sha256 "9aa7642f9578aa096910081f6fab3b74a73eb4e1d3178eb3349f1517bfde6eeb"
   license "MIT"
 
-  depends_on "rust" => :build if OS.linux? || Hardware::CPU.intel?
+  depends_on "python@3.14"
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "zt"
-    else
-      system "cargo", "install", *std_cargo_args
-    end
+    python = Formula["python@3.14"].opt_bin/"python3.14"
+    inreplace "zt", "#!/usr/bin/env python3", "#!#{python}"
+    inreplace "zt", 'VERSION = "0.1.4"', 'VERSION = "0.2.7"'
+
+    bin.install "zt"
     prefix.install "README.md", "LICENSE"
   end
 
