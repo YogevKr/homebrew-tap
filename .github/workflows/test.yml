@@ -19,7 +19,7 @@ jobs:
           - x-bookmarks
           - zt
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Register checkout as tap
         run: |
           tap_dir="$(brew --repository)/Library/Taps/yogevkr/homebrew-tap"
