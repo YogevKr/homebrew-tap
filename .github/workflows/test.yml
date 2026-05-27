@@ -13,6 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         formula:
+          - agent-history
           - draftsx
           - things-cli
           - x-bookmarks
