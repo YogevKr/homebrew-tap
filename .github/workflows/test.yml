@@ -14,6 +14,7 @@ jobs:
       matrix:
         formula:
           - agent-history
+          - codexspin
           - draftsx
           - things-cli
           - x-bookmarks
