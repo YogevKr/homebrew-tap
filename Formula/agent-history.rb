@@ -1,15 +1,15 @@
 class AgentHistory < Formula
   desc "Unified Claude Code and Codex CLI session search"
   homepage "https://github.com/YogevKr/agent-history"
-  version "0.1.8"
+  version "0.1.10"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/YogevKr/agent-history/releases/download/v0.1.8/agent-history-v0.1.8-darwin-arm64.tar.gz"
-    sha256 "a0fda61a58dac71ce2613aec17c6e4fb72e078a3c8d2c0c29e6b9284416b4b66"
+    url "https://github.com/YogevKr/agent-history/releases/download/v0.1.10/agent-history-v0.1.10-darwin-arm64.tar.gz"
+    sha256 "1ffd160cc08fe66d4e7756b592b4d9eb5fc258337afbd677636da97cfdf9713f"
   else
-    url "https://github.com/YogevKr/agent-history/archive/refs/tags/v0.1.8.tar.gz"
-    sha256 "6515eda0e1035e388dad5083daf113fe5a6703722cbe476df93c6d27c4df5fb0"
+    url "https://github.com/YogevKr/agent-history/archive/refs/tags/v0.1.10.tar.gz"
+    sha256 "bb5723f952000f2738a6656a860aee1825aef7ed9438e5102a44b9d597f43127"
   end
 
   depends_on "rust" => :build if OS.linux? || Hardware::CPU.intel?
