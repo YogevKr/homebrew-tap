@@ -1,8 +1,8 @@
 class Codexspin < Formula
   desc "Spin and manage parallel Codex sessions via the codex app-server"
   homepage "https://github.com/YogevKr/codexspin"
-  url "https://github.com/YogevKr/codexspin/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "04ea75c5f6ef7fcf2774fe4dd3c9ede7961b64288e5100346e4cf31257b28b19"
+  url "https://github.com/YogevKr/codexspin/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "533282d30f561b47f98ebafd89e5c30ffcf0a33936b785c71af40e2a44c1ae45"
   license "MIT"
 
   depends_on "python@3.13"
