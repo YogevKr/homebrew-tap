@@ -20,9 +20,11 @@ cask "rai" do
   zap trash: "~/Library/Preferences/gr.krig.rai.plist"
 
   caveats <<~CAVEATS
-    rai is ad-hoc signed but not notarized. If macOS blocks it on first launch,
-    either right-click Rai.app and choose Open, or run:
+    rai is ad-hoc signed but not notarized, so macOS quarantines it. Clear the
+    flag before the first launch:
       xattr -dr com.apple.quarantine "$(brew --caskroom)/rai/#{version}/Rai.app" /Applications/Rai.app 2>/dev/null
-    Or install with:  brew install --cask --no-quarantine yogevkr/tap/rai
+    Homebrew 6 removed --no-quarantine and macOS 15 removed the right-click Open
+    bypass; if Gatekeeper still blocks it, use
+    System Settings > Privacy & Security > Open Anyway.
   CAVEATS
 end
