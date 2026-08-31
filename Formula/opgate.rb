@@ -1,8 +1,8 @@
 class Opgate < Formula
   desc "Scoped, cached 1Password secrets for shells and AI agents"
   homepage "https://github.com/YogevKr/opgate"
-  url "https://github.com/YogevKr/opgate/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "a08c1d11735552860188161a11dffe58f6ae62baa3e8863ccc98f2ffeea89f45"
+  url "https://github.com/YogevKr/opgate/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "8ef247bd212e33a314a2016866e45082004ab1744e564633ea5cdafeec6f499b"
   license "MIT"
 
   uses_from_macos "zsh"
