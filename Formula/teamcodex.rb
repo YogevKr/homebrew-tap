@@ -1,8 +1,8 @@
 class Teamcodex < Formula
   desc "Local account pool and streaming proxy for Codex"
   homepage "https://github.com/YogevKr/teamcodex"
-  url "https://github.com/YogevKr/teamcodex/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "99756682fb57c3ee3e5556eb390ff309ec2979aaf4a9594c5245bbed9560fdfa"
+  url "https://github.com/YogevKr/teamcodex/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "bc8e69df926c4d70ad67a07d998e132114d8d699504b68b51ed0a07b66159815"
   license "MIT"
 
   depends_on "rust" => :build
@@ -15,16 +15,19 @@ class Teamcodex < Formula
   def caveats
     <<~EOS
       The installed command is tcx. Install Codex CLI separately to use tcx run.
-      Create a configuration with:
-        tcx example > config.json
-      Edit the account and credential settings before starting the proxy.
-      The credential adapter is at:
-        #{opt_pkgshare}/examples/opgate-credential.py
+      Add each ChatGPT account through browser login:
+        tcx login --name personal
+      Start the account pool:
+        tcx server
+      In another terminal, launch Codex:
+        tcx run -- --yolo
+      Without a running pool, tcx run launches Codex directly.
     EOS
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/tcx --version")
+    assert_match "--no-browser", shell_output("#{bin}/tcx login --help")
     (testpath/"config.json").write shell_output("#{bin}/tcx example")
     assert_match "Configuration valid", shell_output("#{bin}/tcx --config config.json check")
     assert_match "127.0.0.1:4269", shell_output("#{bin}/tcx --config config.json codex-config")
