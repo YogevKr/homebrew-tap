@@ -1,8 +1,8 @@
 class Teamcodex < Formula
   desc "Local account pool and streaming proxy for Codex"
   homepage "https://github.com/YogevKr/teamcodex"
-  url "https://github.com/YogevKr/teamcodex/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "bc8e69df926c4d70ad67a07d998e132114d8d699504b68b51ed0a07b66159815"
+  url "https://github.com/YogevKr/teamcodex/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "38de411598f2227e1a388ae9f609296408fe3080c5cfce8043ed659efcc2debd"
   license "MIT"
 
   depends_on "rust" => :build
@@ -22,6 +22,8 @@ class Teamcodex < Formula
       In another terminal, launch Codex:
         tcx run -- --yolo
       Without a running pool, tcx run launches Codex directly.
+      When upgrading from 0.2.0, restart the proxy between active Codex sessions.
+      New routing bindings then survive later proxy restarts.
     EOS
   end
 
