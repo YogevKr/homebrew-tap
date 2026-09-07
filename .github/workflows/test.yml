@@ -16,6 +16,7 @@ jobs:
           - agent-history
           - codexspin
           - draftsx
+          - teamcodex
           - things-cli
           - x-bookmarks
           - zt
