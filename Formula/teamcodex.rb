@@ -1,8 +1,8 @@
 class Teamcodex < Formula
   desc "Local account pool and streaming proxy for Codex"
   homepage "https://github.com/YogevKr/teamcodex"
-  url "https://github.com/YogevKr/teamcodex/archive/refs/tags/v0.3.8.tar.gz"
-  sha256 "307d7f5c2bbb3881b671706a16e8978f313da2a0141d7026c886964541b23d7d"
+  url "https://github.com/YogevKr/teamcodex/archive/refs/tags/v0.3.9.tar.gz"
+  sha256 "af76203961a4a0207b0c2fa8544e68a934e6a061b642d53abf288a3a0ad723fa"
   license "MIT"
 
   depends_on "rust" => :build
