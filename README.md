@@ -1,6 +1,6 @@
 # homebrew-tap
 
-Homebrew tap for `agent-history`, `draftsx`, `teamcodex`, `things-cli`, `x-bookmarks`, and `zt`.
+Homebrew tap for `agent-history`, `draftsx`, `skill-router`, `teamcodex`, `things-cli`, `x-bookmarks`, and `zt`.
 
 ## Install
 
@@ -8,6 +8,7 @@ Homebrew tap for `agent-history`, `draftsx`, `teamcodex`, `things-cli`, `x-bookm
 brew tap yogevkr/tap
 brew install yogevkr/tap/agent-history
 brew install yogevkr/tap/draftsx
+brew install yogevkr/tap/skill-router
 brew install yogevkr/tap/teamcodex
 brew install yogevkr/tap/things-cli
 brew install yogevkr/tap/x-bookmarks
@@ -18,6 +19,7 @@ brew install yogevkr/tap/zt
 
 - `agent-history`: unified Claude Code and Codex CLI session search
 - `draftsx`: CLI and rebuildable local index for Drafts.app
+- `skill-router`: scoped, cached routing for agent skills
 - `teamcodex`: local account pool and streaming proxy for Codex; installs `tcx`
 - `things-cli`: CLI for agents working with the real Things 3 app
 - `x-bookmarks`: shell-first X bookmarks archive with local search and sync
