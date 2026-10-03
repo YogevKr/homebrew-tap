@@ -3,8 +3,8 @@ class SkillRouter < Formula
 
   desc "Scoped, cached routing for agent skills"
   homepage "https://github.com/YogevKr/skill-router"
-  url "https://github.com/YogevKr/skill-router/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "adb038b683b53e1f26d1f30459025c3d4216c64b623616217c4385dd367018e7"
+  url "https://github.com/YogevKr/skill-router/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "e6c690f6d63636b2565489d15be36378291564c22239a14130fcf47e198bc610"
 
   depends_on "python@3.13"
 
