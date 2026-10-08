@@ -1,6 +1,6 @@
 cask "rai" do
-  version "0.1.92"
-  sha256 "51d3a100c60aa26a65eab31c87b7ce87239aba637377aea42bdb18d51e205921"
+  version "0.1.93"
+  sha256 "a1a18b5aa1446b854d72e49c719ea586fc45dede29291304cb99d438e8e751bd"
 
   url "https://github.com/YogevKr/rai/releases/download/v#{version}/Rai-#{version}-macos.dmg",
       verified: "github.com/YogevKr/rai/"
